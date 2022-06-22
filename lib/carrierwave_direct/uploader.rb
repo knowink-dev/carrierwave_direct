@@ -106,7 +106,7 @@ module CarrierWaveDirect
     end
 
     def extension_regexp
-      allowed_file_types = extension_white_list
+      allowed_file_types = extension_allowlist
       extension_regexp = allowed_file_types.present? && allowed_file_types.any? ?  "(#{allowed_file_types.join("|")})" : "\\w+"
     end
 

@@ -138,26 +138,26 @@ describe CarrierWaveDirect::Uploader do
       expect(subject.extension_regexp).to be_a(String)
     end
 
-    context "where #extension_white_list returns nil" do
+    context "where #extension_allowlist returns nil" do
       before do
-        allow(subject).to receive(:extension_white_list).and_return(nil)
+        allow(subject).to receive(:extension_allowlist).and_return(nil)
       end
 
       it_should_behave_like "a globally allowed file extension"
     end
 
-    context "where #extension_white_list returns []" do
+    context "where #extension_allowlist returns []" do
       before do
-        allow(subject).to receive(:extension_white_list).and_return([])
+        allow(subject).to receive(:extension_allowlist).and_return([])
       end
 
       it_should_behave_like "a globally allowed file extension"
     end
 
-    context "where #extension_white_list returns ['exe', 'bmp']" do
+    context "where #extension_allowlist returns ['exe', 'bmp']" do
 
       before do
-        allow(subject).to receive(:extension_white_list).and_return(%w{exe bmp})
+        allow(subject).to receive(:extension_allowlist).and_return(%w{exe bmp})
       end
 
       it "should return '(exe|bmp)'" do
