@@ -16,10 +16,10 @@ describe CarrierWaveDirect::Uploader::DirectUrl do
       ).public_url
     end
 
-    context ":with_path => true" do
+    context ":url => true" do
       it "should return the full url set by carrierwave" do
         allow(subject).to receive(:url).and_return("url")
-        expect(subject.direct_fog_url(:with_path => true)).to eq "url"
+        expect(subject.direct_fog_url(:url => true)).to eq "https://s3.amazonaws.com/AWS_FOG_DIRECTORY/"
       end
     end
   end
