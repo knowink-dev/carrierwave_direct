@@ -3,12 +3,6 @@
 require 'spec_helper'
 require 'erb'
 
-class CarrierWaveDirect::FormBuilder
-  attr_accessor :template, :object
-
-  public :content_choices_options
-end
-
 shared_examples_for 'hidden values form' do
   hidden_fields = [
                     :key,
