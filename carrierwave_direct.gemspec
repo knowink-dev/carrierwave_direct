@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "carrierwave_direct"
 
-  s.add_dependency "carrierwave", "~> 0.11"
   s.add_dependency "fog-aws"
 
   s.add_development_dependency "byebug"
